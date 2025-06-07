@@ -1,0 +1,8 @@
+Instalar mui/material:
+npm install @mui/material
+
+Instalar mui icons:
+npm install @mui/icons-material @emotion/styled @emotion/react
+
+Update NPM:
+npm install -g npm@lates
