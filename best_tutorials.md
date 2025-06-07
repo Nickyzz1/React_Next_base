@@ -9,8 +9,11 @@
       weight: ['400', '600', '700'],
       variable: '--font-outfit',    // para usar como CSS var
     })`
+2. Agora adicione ao layout.css o seguite
 
-2. atualize no tailwind.config.js:
+   `<body className={`${outfit.variable} font-sans`}>`
+
+4. atualize no tailwind.config.js:
 
     `module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx}'],
