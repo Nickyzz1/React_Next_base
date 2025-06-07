@@ -26,6 +26,6 @@ atualize no tailwind.config.js:
 
 Agora já é possível usar assim:
 
-<p className="font-outfit text-lg">
-  Este parágrafo está usando a fonte Outfit!
-</p>
+    <p className="font-outfit text-lg">
+      Este parágrafo está usando a fonte Outfit!
+    </p>
