@@ -70,7 +70,49 @@ Agora já é possível usar assim:
         <p>Esse texto muda de cor no modo escuro!</p>
       </div>
 
+# Modo escuro com mui/material
 
+1.Crie um arquivo Theme.ts com usuas paletas
+
+      // theme.ts
+      import { createTheme } from '@mui/material/styles'
+      
+      export const darkTheme = createTheme({
+        palette: {
+          mode: 'dark', // ativa o modo escuro
+        },
+      })
+      
+      export const lightTheme = createTheme({
+        palette: {
+          mode: 'light',
+        },
+      })
+
+
+2.Agora para alterar entre eles você deve usar o themeprovaider
+
+   <pre> ```// pages/_app.tsx ou app/layout.tsx (com client component)
+      import { useState } from 'react'
+      import { ThemeProvider } from '@mui/material/styles'
+      import CssBaseline from '@mui/material/CssBaseline'
+      import { lightTheme, darkTheme } from '@/theme' 
+      
+      export default function MyApp({ Component, pageProps }) {
+        const [darkMode, setDarkMode] = useState(false)
+      
+        const toggleDarkMode = () => setDarkMode(!darkMode)
+      
+        return (
+          <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+            <CssBaseline /> {/* Normaliza estilos base do MUI */}
+            <button onClick={toggleDarkMode} style={{margin: 16}}>
+              {darkMode ? 'Modo Claro' : 'Modo Escuro'}
+            </button>
+            <Component {...pageProps} />
+          </ThemeProvider>
+        )
+      } ``` <pre/>
 
 
 
