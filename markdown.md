@@ -20,4 +20,4 @@
 [Texto do link](https://exemplo.com)
 
 
-![Texto alternativo](https://link-da-imagem.com/imagem.png)
+![Texto alternativo](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
