@@ -35,16 +35,60 @@ E tenha o sufixo .d.ts.
 Arquivo de configuração principal do Next.js.
 
 📄 Coisas que você configura aqui:
-Redirecionamentos (redirects)
 
-Rewrites de rota (rewrites)
+ - Redirecionamentos (redirects)
+  
+ - Rewrites de rota (rewrites)
+  
+ - Configurações do Webpack (ex: suportar .svg)
+  
+ - Variáveis de ambiente públicas
+  
+ - Internacionalização (i18n)
+  
+ - Output (export, standalone, etc.)
 
-Configurações do Webpack (ex: suportar .svg)
+🌍 Internacionalização (i18n)
+Configura o app para lidar com vários idiomas.
 
-Variáveis de ambiente públicas
+ts
 
-Internacionalização (i18n)
+    i18n: {
+      locales: ['pt-BR', 'en'],
+      defaultLocale: 'pt-BR',
+    }
 
-Output (export, standalone, etc.)
+🌱 Variáveis de ambiente públicas
+Você pode definir variáveis de ambiente públicas, que começam com NEXT_PUBLIC_.
+
+Exemplo:
+
+  env
+  `NEXT_PUBLIC_API_URL=https://api.meusite.com`
+  ts
+  `process.env.NEXT_PUBLIC_API_URL`
+
+
+☘️Restringir origens:
+
+      reactStrictMode: true,
+      images: {
+        domains: ['meusite.com'],
+      },
+  
+🔄 Rewrites de rota (rewrites)
+Permite que uma URL pareça uma coisa, mas internamente aponte para outra.
+Diferente do redirect, aqui a URL do navegador não muda.
+
+    async rewrites() {
+      return [
+        {
+          source: '/api/produtos',
+          destination: 'https://api.minhaempresa.com/produtos',
+        },
+      ];
+    }
+
+
 
 
