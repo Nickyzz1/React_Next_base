@@ -7,29 +7,24 @@ O sufixo .d.ts significa: definition file (arquivo de definição de tipos).
 
 É uma convenção comum chamar esse arquivo de declarations.d.ts, mas você pode dar outro nome, tipo:
 
-svg.d.ts
+  - svg.d.ts
+  
+  - custom-modules.d.ts
+  
+  - types/global.d.ts
 
-custom-modules.d.ts
-
-types/global.d.ts
-
-Contanto que:
-
-Ele esteja incluído nos caminhos de TypeScript (tsconfig.json).
-
-E tenha o sufixo .d.ts.
+Contanto que ele esteja incluído nos caminhos de TypeScript (tsconfig.json) e tenha o sufixo .d.ts.
 
 # include
 
-  {
+  `{
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.d.ts"]
-  }
+  }`
 
 💬 Isso significa:
 “Ei, TypeScript! Analisa e entende todos os arquivos que terminem com .ts, .tsx e .d.ts em qualquer pasta, além do next-env.d.ts.”
 
-
-# Net.xxonfig.ts
+# Net.config.ts
 
 ✅ O que é:
 Arquivo de configuração principal do Next.js.
