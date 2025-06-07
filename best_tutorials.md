@@ -92,11 +92,11 @@ Agora já é possível usar assim:
 
 2.Agora para alterar entre eles você deve usar o themeprovaider
 
-   <pre> ```// pages/_app.tsx ou app/layout.tsx (com client component)
-      import { useState } from 'react'
-      import { ThemeProvider } from '@mui/material/styles'
-      import CssBaseline from '@mui/material/CssBaseline'
-      import { lightTheme, darkTheme } from '@/theme' 
+      // pages/_app.tsx ou app/layout.tsx (com client component)
+         import { useState } from 'react'
+         import { ThemeProvider } from '@mui/material/styles'
+         import CssBaseline from '@mui/material/CssBaseline'
+         import { lightTheme, darkTheme } from '@/theme' 
       
       export default function MyApp({ Component, pageProps }) {
         const [darkMode, setDarkMode] = useState(false)
@@ -112,7 +112,7 @@ Agora já é possível usar assim:
             <Component {...pageProps} />
           </ThemeProvider>
         )
-      } ``` <pre/>
+      } 
 
 
 
