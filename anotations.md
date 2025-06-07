@@ -27,3 +27,24 @@ E tenha o sufixo .d.ts.
 
 💬 Isso significa:
 “Ei, TypeScript! Analisa e entende todos os arquivos que terminem com .ts, .tsx e .d.ts em qualquer pasta, além do next-env.d.ts.”
+
+
+# Net.xxonfig.ts
+
+✅ O que é:
+Arquivo de configuração principal do Next.js.
+
+📄 Coisas que você configura aqui:
+Redirecionamentos (redirects)
+
+Rewrites de rota (rewrites)
+
+Configurações do Webpack (ex: suportar .svg)
+
+Variáveis de ambiente públicas
+
+Internacionalização (i18n)
+
+Output (export, standalone, etc.)
+
+
